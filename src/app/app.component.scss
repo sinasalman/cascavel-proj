@@ -1,37 +1,80 @@
-
-.con{
+.con {
     width: 100vw;
     height: 100vh;
-    background:url(../assets/wllp1.png);
+    background: url(../assets/wllp1.png);
     background-size: 100% 100%;
 }
+
 @keyframes fade-down {
-    0%{
+    0% {
         opacity: 0;
-        transform: scale(0.7);
+        scale: 0.8;
     }
 
-    100%{
-        visibility: hidden;
-        opacity: 1;
-        
+    50% {
+        opacity: 0.8;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0  
     }
 
 }
 
-.cas{
+@keyframes fade_down_intro {
+    0% {
+        opacity: 0;
+        scale: 0.9;
+    }
+    70%{
+        opacity: 0.8;
+    }
+    90% {
+        
+        scale:0.95;
+    }
+
+    100% {
+        opacity: 0  
+       
+    }
+}
+
+
+.cas {
+    opacity: 0;
     background-color: transparent;
     position: absolute;
-    display: block;
     width: 100%;
     height: 20vh;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 35vh;
     color: white;
     font-size: 6rem;
-    animation: fade-down 2s;
-    font-family: 'Lexend' , sans-serif;
-    letter-spacing: 2rem;
+    animation: fade-down 4s;
+    font-family: 'Lexend', sans-serif;
     
+}
+
+.txt {
+    letter-spacing: 2rem;
+}
+
+.intro {
+    opacity: 0;
+    position: absolute;
+    // display: flex;
+    text-align: center;
+    width: 100vw;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(115, 106, 22);
+   
+    font-size: 1.2rem;
+    // animation: fade_down_intro 4s;
+    margin-top: 70vh;
+    overflow: hidden;
+    animation: fade_down_intro 4s;
 
 }
