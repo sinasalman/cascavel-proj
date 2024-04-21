@@ -1,3 +1,11 @@
+*{
+    overflow: hidden;
+    user-select: none;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../assets/Lexend-VariableFont_wght.ttf);
+}
 .con {
     width: 100vw;
     height: 100vh;
@@ -41,7 +49,28 @@
     }
 }
 
-
+@keyframes fall-down{
+    0%{
+        margin-top: -10vw;
+    }
+    80%{
+        margin-top: -10vw;
+    }
+    100%{
+        margin-top: 2rem;
+    }
+}
+@keyframes left-to-right{
+    0%{
+        margin-left: -100vw;
+    }
+    70%{
+        margin-left: -100vw;
+    }
+    100%{
+        margin-left: 19.35vw;
+    }
+}
 .cas {
     opacity: 0;
     background-color: transparent;
@@ -51,8 +80,8 @@
     text-align: center;
     margin-top: 35vh;
     color: white;
-    font-size: 6rem;
-    animation: fade-down 4s;
+    font-size: 5vw;
+    animation: fade-down 5s;
     font-family: 'Lexend', sans-serif;
     
 }
@@ -77,4 +106,45 @@
     overflow: hidden;
     animation: fade_down_intro 4s;
 
+}
+.nav{
+    a{
+        color: #ced0d1;
+        &:hover{
+            cursor: pointer;
+        }
+   }
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+   li{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    
+    gap:10vw;
+   }
+    animation: fall-down 5s;
+}
+.welcome{
+    width: 80vw;
+    height: 40vh;
+    margin-left: 19.35vw;
+    position: absolute;
+    animation: left-to-right 5s;
+    margin-top: 30vh;   
+}
+.wlc{
+    margin-left:0;
+    color: #FFFFFFCC;
+    font-size: 2.89vw;
+}
+.to{
+    margin-left: 10vw;
+    font-size: 7vw;
+    color:transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(115, 106, 22);
+    
 }
