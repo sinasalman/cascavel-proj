@@ -5,6 +5,7 @@
         display: inline-block;
         position: relative;
         letter-spacing: 0.05rem;
+
         &::after {
 
             background: none repeat scroll 0 0 transparent;
@@ -19,11 +20,13 @@
             width: 0;
 
         }
-        &:hover::after{
-            width: 100%; 
-            left: 0; 
-    
+
+        &:hover::after {
+            width: 100%;
+            left: 0;
+
         }
+
         &:hover {
             cursor: pointer;
             color: #e4e4e4;
@@ -48,5 +51,21 @@
         width: 50vw;
     }
 
-    
+
+}
+
+.list {
+    position: absolute;
+    display: flex;
+    width: 30vw;
+    height: 50vh;
+    z-index: 1;
+    margin-top: 20vh;
+    background-color: #e4e4e4;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.cardOfeach {
+    display: block;
 }

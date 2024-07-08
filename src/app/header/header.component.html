@@ -1,13 +1,28 @@
 <div class="nav">
     <div>
         <li>
-            <a>
-                CONTACT US
+            <a (click)="teamFunck()">
+                Team
+                
             </a>
-            <img src="../assets/img/Cascavel 2.png" style="width: 4rem;">
+            <img src="../assets/img/Cascavel 2.png" style="width: 4rem;" routerLink="">
             <a>
                 SAMPLES
             </a>
         </li>
+    </div>
+</div>
+<div class="teamContainer">
+    <div class="list">
+        <div class="cardOfeach" *ngFor="let card of list">
+            <div class="pic">
+                
+            </div>
+            <div class="nameJob"></div>
+            <div class="describe"></div>
+        </div>
+    </div>
+    <div class="toggle">
+
     </div>
 </div>

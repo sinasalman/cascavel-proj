@@ -14,6 +14,7 @@
     flex-direction: row;
     align-items: center;
     margin-top:25vh ;
+    
 }
 .line{
     width: 70%;
@@ -26,4 +27,5 @@
     height: 50vh;
     border: 0.1rem solid rgb(115, 106, 22);
     border-radius: 2rem 0 2rem 0;
+    backdrop-filter: blur(20px);
 }
