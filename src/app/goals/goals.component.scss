@@ -1,0 +1,49 @@
+.con {
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../assets/wllp1.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.contain {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.diamond {
+    margin-left: calc(50% - 12.5rem);
+    margin-top: 10%;
+    position: relative;
+    height: 25rem;
+    width: 25rem;
+
+    text-align: center;
+   
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0px;
+        left: 0px;
+        height: 70%;
+        width: 70%;
+        left: 3.9rem;
+        top: 3.9rem;
+        transform: rotateX(45deg) rotateZ(45deg);
+        border: 0.15rem solid #655804;
+    }
+   .text{
+    margin-top: 11rem;
+    color: #655804;
+    text-shadow: 1px 1px 1px #889139dd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+   }
+}
+

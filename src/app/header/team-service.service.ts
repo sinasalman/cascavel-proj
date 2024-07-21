@@ -9,29 +9,30 @@ export class TeamServiceService {
   teamList(): TeamInfo[]{ 
     return [
       {
-        image: '',
+        image: '../../assets/img/me.jpg',
         name:'Sina Salman',
         stack:'programmer',
         description:'',
+      },
+      {
+        image: '../../assets/img/fatemeh.jpg',
+        name:'Fatemeh Rostami',
+        stack:'designer',
+        description:'',
       },   {
-        image: '',
+        image: '../../assets/img/davari.jpg',
         name:'Sina Davari',
         stack:'designer',
         description:'',
       },   {
-        image: '',
+        image: '../../assets/img/mosofa.jpg',
         name:'Mostafa Gholami',
         stack:'programmer/graphist',
         description:'',
       },
+     
       {
-        image: '',
-        name:'Fatemeh Rostami',
-        stack:'programmer',
-        description:'',
-      }   ,
-      {
-        image: '',
+        image: '../../assets/img/aboli.jpg',
         name:'Abolfazl Ghadiri',
         stack:'designer',
         description:'',

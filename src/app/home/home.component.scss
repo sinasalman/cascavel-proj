@@ -158,6 +158,9 @@
 
 .navAnim {
     animation: falldown 5s;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
 
 }
 
@@ -171,14 +174,14 @@
 }
 
 .wlc {
-    margin-left: 0;
-    color: #FFFFFFCC;
+    margin-left: 3vw;
+    color: #ffffffcc;
     font-size: 2.89vw;
     letter-spacing: 0.3rem;
 }
 
 .to {
-    margin-left: 10vw;
+    margin-left: 0vw;
     font-size: 5vw;
     color: transparent;
     -webkit-text-stroke-width: 1px;
