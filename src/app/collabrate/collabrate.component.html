@@ -1,0 +1,41 @@
+<div class="Con">
+    <app-header></app-header>
+    <div class="chains">
+        <div [style]="connection ? connect : disconnect" class="chainUp">
+            <img src="../../assets/img/chainUp.png" alt="" width="30%" height="140%">
+        </div>
+        <div [style]="connection ? connect1 : disconnect1" class="chainDown">
+
+            <img src="../../assets/img/chainDown.png" alt="" width="30%" height="120%">
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <div class="textHolder">
+        <div class="txt" style="text-align: center; ">
+            <span style="width: 100%;"> If you don't want to fall behind your competitors in the market, you have to take your business
+                online.
+                Need a website? application?
+                The team at Cascavel will develop your web app with dynamic and classic designs. <br> <br> Don't worry,
+                just fill
+                the form. <br></span>
+
+        </div>
+        <form>
+            <div> <label for="name">Name</label>
+                <input type="text" name="name" id="name" #name >
+            </div>
+            <div>
+                <label for="email" >Email</label>
+                <input type="email" required name="email" #email>
+            </div>
+            <div><label for="Subject">Subject</label>
+                <textarea name="Subject" id="Subject" #subject></textarea>
+            </div>
+
+            <button (mouseleave)="connectionSet()" (mouseover)="connectionSet()">Submit</button>
+        </form>
+
+    </div>
+
+</div>

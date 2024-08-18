@@ -10,7 +10,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
-import { GoalsComponent } from './goals/goals.component';
+import { CollabrateComponent } from './collabrate/collabrate.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { GoalsComponent } from './goals/goals.component';
     HeaderComponent,
     AboutUsComponent,
     HomeComponent,
-    GoalsComponent
+    CollabrateComponent
    
 
   ],

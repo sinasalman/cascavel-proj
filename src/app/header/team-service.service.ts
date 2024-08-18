@@ -14,12 +14,7 @@ export class TeamServiceService {
         stack:'programmer',
         description:'',
       },
-      {
-        image: '../../assets/img/fatemeh.jpg',
-        name:'Fatemeh Rostami',
-        stack:'designer',
-        description:'',
-      },   {
+        {
         image: '../../assets/img/davari.jpg',
         name:'Sina Davari',
         stack:'designer',
