@@ -1,7 +1,7 @@
 <div class="nav">
 
     <li>
-        <a style="color: #ffffffcc" (click)="toggle()">
+        <a style="color: #ffffffcc ; text-decoration: none;" routerLink="/team">
             Team
 
         </a>
@@ -12,32 +12,4 @@
             Samples
         </a>
     </li>
-</div>
-<div class="sliderContainer" *ngIf="showList">
-    
-    <div class="Slider" *ngFor="let card of list ;let i = index" 
-    [ngClass]="{
-            'selected' : i === selectedIndex,
-            'prev' : i === selectedIndex - 1 ,
-            'next' : i === selectedIndex + 1 ,
-            'hideLeft' : i < selectedIndex - 1 , 
-            'hideRight' : i > selectedIndex + 1 
-            
-        }" (panright)="showprev(i)" (panleft)="shownext(i)" >
-       
-        <div class="pics">
-        
-        <img src="{{card.image}}" width="100%" height="100%" style="box-shadow: inset 10px 10px 10px 0 #0c0e01;">
-        
-        </div>
-        <div class="texts">
-            
-        </div>
-        
-
-       
-    </div>
-    <div style="width: 100%; height: 100%;">
-        <div class="butt" (click)="toggle()">close</div>
-    </div>
 </div>

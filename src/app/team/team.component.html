@@ -1,0 +1,44 @@
+<div class="Con">
+    <app-header></app-header>
+    <app-footer></app-footer>
+    <div class="sliderContainer">
+
+        <div class="Slider" *ngFor="let card of list ;let i = index" [ngClass]="{
+                'selected' : i === selectedIndex,
+                'prev' : i === selectedIndex - 1 ,
+                'next' : i === selectedIndex + 1 ,
+                'hideLeft' : i < selectedIndex - 1 , 
+                'hideRight' : i > selectedIndex + 1 
+                
+            }" (panright)="showprev(i)" (panleft)="shownext(i)">
+
+            <div class="pics">
+
+                <img src="{{card.image}}" width="100%" height="100%"
+                    style="box-shadow: inset 10px 10px 10px 0 #0c0e01;">
+
+            </div>
+
+
+
+
+        </div>
+        <div class="texts" *ngFor="let card of list ;let i = index">
+            <div *ngIf="selectedIndex===i" class="infos">
+                <h1 style="color: rgb(232, 221, 221); font-family: Lexend; font-size: 3.5rem;">{{card.name}}</h1>
+                <span
+                    style="color: rgb(232, 221, 221); font-family: Lexend; font-size: 1.5rem; margin-top: -5vh; font-weight: lighter;">{{card.stack}}</span>
+                <span style="color: rgb(232, 221, 221); font-family: Lexend; font-size: 1.rem;">we all love dicks in
+                    cascavel and we want to suck black dicks every day we all love dicks in cascavel and we want to suck
+                    black dicks every day we all love dicks in cascavel and we want to suck black dicks every day</span>
+                <div class="buttons">
+                    <button>Website</button>
+                    <button>Resume</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+</div>

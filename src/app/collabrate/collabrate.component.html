@@ -23,14 +23,14 @@
         </div>
         <form>
             <div> <label for="name">Name</label>
-                <input type="text" name="name" id="name" #name >
+                <input type="text" name="name" id="name" #name required>
             </div>
             <div>
                 <label for="email" >Email</label>
                 <input type="email" required name="email" #email>
             </div>
             <div><label for="Subject">Subject</label>
-                <textarea name="Subject" id="Subject" #subject></textarea>
+                <textarea name="Subject" id="Subject" #subject required></textarea>
             </div>
 
             <button (mouseleave)="connectionSet()" (mouseover)="connectionSet()">Submit</button>

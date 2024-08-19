@@ -11,27 +11,34 @@ export class TeamServiceService {
       {
         image: '../../assets/img/me.jpg',
         name:'Sina Salman',
-        stack:'programmer',
-        description:'',
+        stack:'web Developer (Angular , Node JS)',
+        description:'I love new challenges in my Life .',
       },
         {
         image: '../../assets/img/davari.jpg',
         name:'Sina Davari',
         stack:'designer',
-        description:'',
+        description:'I love Sina Salman',
       },   {
         image: '../../assets/img/mosofa.jpg',
         name:'Mostafa Gholami',
-        stack:'programmer/graphist',
-        description:'',
+        stack:'web Developer/graphist',
+        description:'I Love python',
       },
      
       {
         image: '../../assets/img/aboli.jpg',
         name:'Abolfazl Ghadiri',
         stack:'designer',
-        description:'',
+        description:'I Love figma',
+      },
+      {
+        image: '../../assets/img/OB.jpg',
+        name:'AmirReza Ajam',
+        stack:'web Developer(Django)',
+        description:'I Love huge dicks',
       }
+
   ]
   
 
