@@ -31,14 +31,18 @@
                 <span style="color: rgb(232, 221, 221); font-family: Lexend; font-size: 1.rem;">we all love dicks in
                     cascavel and we want to suck black dicks every day we all love dicks in cascavel and we want to suck
                     black dicks every day we all love dicks in cascavel and we want to suck black dicks every day</span>
-                <div class="buttons">
-                    <button>Website</button>
-                    <button>Resume</button>
-                </div>
+
             </div>
+        </div>
+        <div class="buttons" *ngFor="let card of list ;let i = index">
+            <div *ngIf="selectedIndex===i" style="display: flex; flex-direction: row; gap: 4vw; margin-left: 53vw; margin-top:42vh;z-index: 2;width: 35vw; padding: 1rem;"> 
+                <button class="clicker" (click)="debug()">Website</button>
+                <button class="clicker">Resume</button>
+            </div>
+
         </div>
 
 
     </div>
-    
+
 </div>

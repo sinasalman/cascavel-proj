@@ -1,4 +1,36 @@
 <div class="con">
-    <app-header></app-header>
+    <app-header style="z-index: 1;"></app-header>
     <app-footer></app-footer>
+    <div class="services-section">
+        <div class="firstLine">
+            <div class="service-card1" (mouseover)="txt1()" (mouseleave)="nottxt1()">
+                <h2>{{text1}}</h2>
+                <p></p>
+            </div>
+            <div class="mainCard">
+                <div class="covering"></div>
+                <h1 class="services-title">SERVICES</h1>
+            </div>
+           
+            <div class="service-card2" (mouseover)="txt2()">
+                <h2>{{text2}}</h2>
+                <p></p>
+            </div>
+        </div>
+       
+
+        <div class="secLine">
+            
+           
+            
+            <div class="service-card1" (mouseover)="txt3()">
+                <h2>{{text3}}</h2>
+                <p></p>
+            </div>
+            <div class="service-card2" (mouseover)="txt4()">
+                <h2>{{text4}}</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
 </div>

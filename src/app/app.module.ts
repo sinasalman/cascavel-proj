@@ -14,6 +14,8 @@ import { CollabrateComponent } from './collabrate/collabrate.component';
 import { ServicesComponent } from './services/services.component';
 import { TeamComponent } from './team/team.component';
 
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { SamplesComponent } from './samples/samples.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { TeamComponent } from './team/team.component';
     HomeComponent,
     CollabrateComponent,
     ServicesComponent,
-    TeamComponent
+    TeamComponent,
+    SamplesComponent
    
 
   ],
@@ -33,7 +36,8 @@ import { TeamComponent } from './team/team.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SwiperModule,
-    HammerModule
+    HammerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,193 @@
-.con{
+.con {
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     box-sizing: border-box;
     background: url(../../assets/wllp1.png);
-    background-size:100% ;
+    background-size: 100% 100%;
     padding: 0;
     margin: 0;
+
+
+}
+
+.firstLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.services-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    overflow: visible;
+
+}
+
+.services-title {
+
+    font-size: 4rem;
+    color: #d5b159;
+
+
+    margin-top: 2.5rem;
+
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to right, #735F32, #D8C673);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.secLine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+
+}
+
+.covering {
+
+    width: 15rem;
+    height: 10rem;
+    position: absolute;
+    background-image: linear-gradient(to right, transparent, rgba(128, 128, 128, 0.443), transparent);
+    border-image: linear-gradient(to right, transparent, #735F32, transparent)20% 1 20%;
+
+    border-style: solid;
+}
+
+.mainCard {
+    width: 23rem;
+
+    border-width: 2px;
+
+
+    height: 10rem;
+
+    text-overflow: ellipsis;
+    justify-content: center;
+    display: flex;
+
+    overflow: visible;
+
+
+
+}
+
+.service-card1 {
+    width: 23rem;
+    font-family: Lexend;
+    height: 12rem;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+    padding: 0.5rem;
+    color: rgb(228, 228, 217);
+    background: linear-gradient(to left, rgba(99, 93, 93, 0.32), transparent);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 25px;
+        padding: 2px;
+        background: linear-gradient(to left, #735F32, transparent);
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        mask:   linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    &:hover::before {
+        background: linear-gradient(to left, #735F32, #d5b159);
+
+
+    }
+
+    &:hover {
+        background: linear-gradient(to left, rgba(141, 135, 135, 0.18), rgba(141, 135, 135, 0.176));
+       
+    }
+
+}
+
+.service-card2 {
+    width: 23rem;
+    font-family: Lexend;
+    height: 12rem;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+    padding: 0.5rem;
+    color: rgb(228, 228, 217);
+    background-image: linear-gradient(to right, rgba(99, 93, 93, 0.32), transparent);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) .5s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 25px;
+        padding: 2px;
+        background-image: linear-gradient(to right, #735F32, transparent);
+        transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) .5s;
+        mask: linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+        -webkit-mask:
+              linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    &:hover::before {
+        background-image: linear-gradient(to right, #735F32, #d5b159);
+    }
+
+    &:hover {
+        background-image: linear-gradient(to right, rgba(141, 135, 135, 0.18), rgba(141, 135, 135, 0.176));
+    }
+}
+
+
+
+
+
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
 }

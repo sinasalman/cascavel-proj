@@ -26,5 +26,7 @@ export class TeamComponent implements OnInit{
     }
 
   }
- 
+ debug(){
+  console.log("accept")
+ }
 }

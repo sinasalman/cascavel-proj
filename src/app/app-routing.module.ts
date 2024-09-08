@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { CollabrateComponent } from './collabrate/collabrate.component';
 import { ServicesComponent } from './services/services.component';
 import { TeamComponent } from './team/team.component';
+import { SamplesComponent } from './samples/samples.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,11 @@ const routes: Routes = [
   },
   {
     path:'team',component:TeamComponent
+  },
+  {
+    path:'samples',component:SamplesComponent
   }
+
 ];
 
 @NgModule({

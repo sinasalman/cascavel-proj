@@ -75,38 +75,28 @@
     }
 
 }
-
-.card {
-    background-color: #987777;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-
-}
-
-.butt {
-    position: absolute;
-    color: rgb(162, 183, 115);
-    border-radius: 1rem;
-    top: 2vh;
-    left: 80vw;
-    width: 10vw;
-    height: 5vh;
-    text-align: center;
-    padding: 0.8vh;
-    border: 0.05rem solid #98a70f;
-    transition: 500ms;
-
-    &:hover {
-        transform: scale(1.1);
-        background-color: #3b4304;
-        color: #cbcbcb;
-
-        cursor: pointer;
+.clicker{
+    background-color: transparent;
+    text-decoration: none;
+    display: block;
+    width: 11rem;
+    height: 3rem;
+    border-image: linear-gradient(transparent 20%, #98a70f) 10;
+    color: white;
+    font-family: Lexend;
+    font-size: 1.3rem;
+    transition: 300ms;
+    &:hover{
+        border-image: linear-gradient(transparent 1%, #98a70f) 10;
+        transform: scale(1.02);
+        background-color: #5b5b1765;
     }
-
+  
 }
+
+
+
+
 
 .pics {
     width: 100%;
@@ -118,13 +108,13 @@
 }
 .texts{
     
-    margin-top: 10vh;
+    margin-top: 0vh;
     margin-left: 50vw;
     position: absolute;
     width: 40vw;
-    height: 60vh;
+    height: 40vh;
    
-    
+    z-index: 0;
     
    .infos{
     display: flex;
@@ -134,17 +124,7 @@
         display: flex;
         flex-direction: row;
         gap: 2vw;
-        button{
-            background-color: transparent;
-            width: 11rem;
-            height: 3rem;
-            border-image: linear-gradient(transparent 20%, #98a70f) 10;
-            color: white;
-            font-family: Lexend;
-            font-size: 1.3rem;
-            transition: 300ms;
-           
-        }
+   
     }
    }
 }
