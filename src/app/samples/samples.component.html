@@ -1,5 +1,13 @@
 <div class="con">
     <app-header></app-header>
     <app-footer></app-footer>
-
+    <div class="pathchooser">
+        <div class="button" [ngClass]="{'actived' : G==true }" (click)="setActiveG()">Graphic</div>
+        <div class="button" [ngClass]="{'actived' : D==true }" (click)="setActiveD()">Design</div>
+        <div class="button" [ngClass]="{'actived' : W==true }" (click)="setActiveW()">WebApp</div>
+    </div>
+    <div class="samples" >
+            <div class="line1"></div>
+            <div class="line2"></div>
+    </div>
 </div>

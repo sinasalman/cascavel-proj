@@ -1,8 +1,25 @@
 <app-header></app-header>
 <div class="con display-flex">
     <div class="contain">
-        <div class="line"></div>
-        <div class="box"></div>
+        <div class="line">
+            <button class="Infos" (mouseover)="WebInfoOn()" (mouseleave)="infoOn()">About website</button>
+        </div>
+        <div class="box">
+            <span *ngIf="info">
+                What is Cascavel, and what does it do? <br>
+                We are a startup team that met at university. We were all passionate about our work and decided to
+                collaborate, forming a web development and design team. The most significant realization we had was that
+                we needed to change the world of websites and applications. Our mission is to create dynamic,
+                user-friendly digital experiences that truly deliver the joy of digital work to users, while also
+                building the best websites aligned with the goals of business owners for their business success and
+                convenience.
+            </span>
+            <span *ngIf="webInfo">
+                this website is made by SinaSalman with Angular and NodeJS.<br> the Design of web is
+                a Masterpeice that AbolfazlGhadiri and SinaDavari were worked on it.Logo is designed by MostafaGholami
+                and samples arrenged by AmirAjam who is a Python Lover.click On Team to get more information about Us!
+            </span>
+        </div>
         <div class="line"></div>
 
     </div>

@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-collabrate',
   templateUrl: './collabrate.component.html',
   styleUrls: ['./collabrate.component.scss']
 })
-export class CollabrateComponent {
+export class CollabrateComponent implements OnInit {
   connection: boolean = false;
   connectionSet (){
     this.connection = !this.connection;
   }
+  
   disconnect = {
     "transition":"700ms",
     "position":"absolute" 
@@ -27,4 +28,7 @@ export class CollabrateComponent {
     "transition":"700ms",
     "position":"absolute"  
   };
+  ngOnInit(): void {
+  
+  }
 }

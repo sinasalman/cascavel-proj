@@ -28,7 +28,7 @@ export class ServicesComponent {
     this.text2 = "UI/UX Design"
   }
   txt3(){
-    this.text3 = "web-App"
+    this.text3 = "Web-App"
   }
   nottxt3(){
     this.text3 = "Web-App"

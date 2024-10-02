@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent {
-
+  info: boolean = true;
+  webInfo : boolean = false;
+  infoOn() {
+    this.info = true;
+    this.webInfo = false;
+  }
+  WebInfoOn() {
+    this.info = false;
+    this.webInfo = true;
+  }
 }
