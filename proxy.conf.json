@@ -1,0 +1,7 @@
+{
+    "/api" :{
+        "target":"https://cascavelsampleuploder.liara.run/sample/api/samplelist",
+        "secure":false , 
+        "changeOrigin":true 
+    }
+}
