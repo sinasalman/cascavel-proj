@@ -13,7 +13,7 @@ import { SwiperModule } from 'swiper/angular';
 import { CollabrateComponent } from './collabrate/collabrate.component';
 import { ServicesComponent } from './services/services.component';
 import { TeamComponent } from './team/team.component';
-
+import { HttpClientModule } from "@angular/common/http";
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SamplesComponent } from './samples/samples.component';
 
@@ -37,7 +37,8 @@ import { SamplesComponent } from './samples/samples.component';
     BrowserAnimationsModule,
     SwiperModule,
     HammerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
