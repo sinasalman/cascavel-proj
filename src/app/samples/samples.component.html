@@ -7,13 +7,12 @@
         <div class="button" [ngClass]="{'actived' : W==true }" (click)="setActiveW()">WebApp</div>
     </div>
     <div class="samples" >
-            <div class="line1"></div>
-            <div class="line2"></div>
+           
             
-            <div class="titles">
-                <span class="title" *ngFor="let sample of sampleLists">
-                    {{sample.title}}
-                </span>
+            <div class="titles" *ngIf="D==true">
+                <div class="title" *ngFor="let sample of designList" >
+                  <div style="background-color: #d96363; width: 100px; height: 100px;"></div>
+                </div>
 
             </div>
     </div>
