@@ -28,7 +28,7 @@ export class SamplesComponent implements OnInit {
     this.W = true;
   }
   etzi:string[] = [
-    "1","2","3"
+    "1","2","3","4" , "5" , "6"
   ]
   sampleLists:any[] = [];
   ngOnInit(): void {
