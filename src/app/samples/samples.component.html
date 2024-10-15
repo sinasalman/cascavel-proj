@@ -11,7 +11,19 @@
             
             <div class="titles" *ngIf="D==true">
                 <div class="title" *ngFor="let sample of designList" >
-                  <div style="background-color: #d96363; width: 100px; height: 100px;"></div>
+                  {{sample.title}}
+                </div>
+
+            </div>
+            <div class="titles" *ngIf="W==true">
+                <div class="title" *ngFor="let sample of webAppList" >
+                    {{sample.title}}
+                </div>
+
+            </div>
+            <div class="titles" *ngIf="G==true">
+                <div class="title" *ngFor="let sample of graphicList" >
+                    <img src="{{sample.image[0]}}" alt="" width="50%" height="100%">
                 </div>
 
             </div>

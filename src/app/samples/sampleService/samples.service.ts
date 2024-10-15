@@ -9,8 +9,8 @@ import { sampleType } from 'src/app/shared/sample';
 export class SamplesService {
   apiUrl = 'https://cascavelsampleuploder.liara.run/sample/api/samplelist';
   constructor(private http:HttpClient) { }
-  getSamples():Observable<sampleType[]>{
-   return this.http.get<sampleType[]>(this.apiUrl);
+  getSamples():Observable<any>{
+   return this.http.get<any[]>(this.apiUrl);
 
   }
 }
