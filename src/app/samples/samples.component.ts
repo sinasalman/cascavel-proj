@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SamplesService } from './sampleService/samples.service';
-
+import { image,sampleType } from '../shared/sample';
 @Component({
   selector: 'app-samples',
   templateUrl: './samples.component.html',
@@ -27,16 +27,26 @@ export class SamplesComponent implements OnInit {
     this.D = false;
     this.W = true;
   }
-  designList:any[] = [];
-  webAppList:any[] = [];
-  graphicList:any[] = [];
+  designList:sampleType[] = [];
+  webAppList:sampleType[] = [];
+  graphicList:sampleType[] = [];
   i: number = 0;
-  
+  baseURL: string ='https://cascavelsampleuploder.liara.run';
   ngOnInit(): void {
-    this.SampleList.getSamples().subscribe(data => {
-      this.designList = data.filter((item:any)=>item.category===3);
-      this.webAppList = data.filter((item:any)=>item.category===1);
-      this.graphicList = data.filter((item:any)=>item.category===2);
+    this.SampleList.getSamples().subscribe((data:sampleType[]) => {
+      this.designList = data.filter((item:sampleType)=>item.category===3).map(item => {item.images = item.images.map((img:image)=>{img.image = `${this.baseURL}${img.image}`;
+       return img;})
+      return item;
+    });
+
+      this.webAppList = data.filter((item:sampleType)=>item.category===1).map(item => {item.images = item.images.map((img:image)=>{img.image = 'https://cascavelsampleuploder.liara.run'+img.image ;
+      return img;})
+     return item;
+   });;
+      this.graphicList = data.filter((item:sampleType)=>item.category===2).map(item => {item.images = item.images.map((img:image)=>{img.image ='https://cascavelsampleuploder.liara.run'+img.image;
+      return img;})
+     return item;
+   });;
     })
     
   }

@@ -1,10 +1,9 @@
-export class sampleType{
-    id!:number;
-    title!:string;
-    body!:string;
-    link!:string;
-    author!:string;
-    category!:number;
-    headImage!:string;
-    images!:string[];
+export interface image{
+    image:string;
+}
+export interface sampleType{
+  title:string;
+  body: string;
+  category:number;
+  images:image[];
 }
