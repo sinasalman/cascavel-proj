@@ -9,20 +9,20 @@
     <div class="samples" >
            
             
-            <div class="titles" *ngIf="D==true">
-                <div class="title" *ngFor="let sample of designList" >
+            <div class="titleSlider" *ngIf="D==true" >
+                <div class="title" *ngFor="let sample of designList;let i=index" >
                     <img [src]="sample.images[0].image" alt="" width="50%" height="100%">
                 </div>
 
             </div>
-            <div class="titles" *ngIf="W==true">
-                <div class="title" *ngFor="let sample of webAppList" >
-                    {{sample.title}}
+            <div class="titleSlider" *ngIf="W==true" >
+                <div class="title" *ngFor="let sample of webAppList;let i=index"  >
+                    <img [src]="sample.images[0].image" alt="" width="50%" height="100%">
                 </div>
 
             </div>
-            <div class="titles" *ngIf="G==true">
-                <div class="title" *ngFor="let sample of graphicList" >
+            <div class="titleSlider" *ngIf="G==true" >
+                <div class="title" *ngFor="let sample of graphicList;let i = index" >
                     <img [src]="sample.images[0].image" alt="" width="50%" height="100%">
                 </div>
 
