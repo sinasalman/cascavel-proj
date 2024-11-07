@@ -15,6 +15,7 @@ import { ServicesComponent } from './services/services.component';
 import { TeamComponent } from './team/team.component';
 import { HttpClientModule } from "@angular/common/http";
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatIconModule} from '@angular/material/icon'
 import { SamplesComponent } from './samples/samples.component';
 
 @NgModule({
@@ -28,7 +29,7 @@ import { SamplesComponent } from './samples/samples.component';
     ServicesComponent,
     TeamComponent,
     SamplesComponent
-   
+    
 
   ],
   imports: [
@@ -38,7 +39,8 @@ import { SamplesComponent } from './samples/samples.component';
     SwiperModule,
     HammerModule,
     MatTooltipModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

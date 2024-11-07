@@ -1,31 +1,101 @@
 <div class="con">
-    <app-header></app-header>
-    <app-footer></app-footer>
-    <div class="pathchooser">
-        <div class="button" [ngClass]="{'actived' : G==true }" (click)="setActiveG()">Graphic</div>
-        <div class="button" [ngClass]="{'actived' : D==true }" (click)="setActiveD()">Design</div>
-        <div class="button" [ngClass]="{'actived' : W==true }" (click)="setActiveW()">WebApp</div>
+  <app-header></app-header>
+  <app-footer></app-footer>
+  <div class="pathchooser">
+    <div
+      class="button"
+      [ngClass]="{ actived: G == true }"
+      (click)="setActiveG()"
+    >
+      Graphic
     </div>
-    <div class="samples" >
+    <div
+      class="button"
+      [ngClass]="{ actived: D == true }"
+      (click)="setActiveD()"
+    >
+      Design
+    </div>
+    <div
+      class="button"
+      [ngClass]="{ actived: W == true }"
+      (click)="setActiveW()"
+    >
+      WebApp
+    </div>
+  </div>
+  <!-- <div class="samples">
+    <mat-icon class="ArrowLeft" (click)="previous()">arrow_forward</mat-icon>
+    <mat-icon class="ArrowRight" (click)="next()">arrow_forward</mat-icon>
+    <div class="titleSlider" *ngIf="D == true" [ngClass]="moveClass">
+      <div
+        class="transforM"
+        [ngClass]="{
+          titleActive: i === setCurrentIndex,
+          titleDisable: i !== setCurrentIndex,
+          invisible : i >= (setCurrentList + 3)|| i < setCurrentList,
+          invisibleLeft : i < setCurrentList
+          
            
-            
-            <div class="titleSlider" *ngIf="D==true" >
-                <div class="title" *ngFor="let sample of designList;let i=index" >
-                    <img [src]="sample.images[0].image" alt="" width="50%" height="100%">
-                </div>
-
-            </div>
-            <div class="titleSlider" *ngIf="W==true" >
-                <div class="title" *ngFor="let sample of webAppList;let i=index"  >
-                    <img [src]="sample.images[0].image" alt="" width="50%" height="100%">
-                </div>
-
-            </div>
-            <div class="titleSlider" *ngIf="G==true" >
-                <div class="title" *ngFor="let sample of graphicList;let i = index" >
-                    <img [src]="sample.images[0].image" alt="" width="50%" height="100%">
-                </div>
-
-            </div>
+        }"
+        *ngFor="let sample of designList; let i = index"
+        #item
+      >
+        <img
+          [src]="sample.images[0].image"
+          alt=""
+          [ngClass]="{
+            activeImage: i === setCurrentIndex,
+            disableImage: i !== setCurrentIndex
+          }"
+          (click)="setCurrentIndex = i"
+        />
+        <div *ngIf="i === setCurrentIndex" class="description">
+          <span
+            style="
+              color: white;
+              font-size: 2rem;
+              margin-left: 5vw;
+              font-family: Lexend;
+            "
+            >{{ sample.title }}</span
+          >
+        </div>
+      </div>
+    </div> -->
+  <div class="sliderContainer">
+    <div
+      class="Slider"
+      *ngFor="let card of designList; let i = index"
+      [ngClass]="{
+              'selected' : i === selectedIndex,
+              'prev' : i === selectedIndex - 1 ,
+              'next' : i === selectedIndex + 1 ,
+              'hideLeft' : i < selectedIndex - 1 , 
+              'Right' : i === selectedIndex + 2,
+              'hideRight' : i > selectedIndex + 2,
+              'Left' : i === selectedIndex - 2, 
+              'Sizechange': isExpanded && i === selectedIndex
+          }"
+      
+      (panright)="showprev(i)"
+      (panleft)="shownext(i)"
+    >
+      <div class="pics" style="width: 100%">
+        <img [src]="card.images[0].image" width="100%" height="100%" />
+      </div>
+      <div class="Describe" *ngIf="selectedIndex == i">
+        <div>
+          <span class="sampleTitle">
+            {{ card.title }}
+          </span>
+        </div>
+        <div>
+          <button class="showFull" (click)="SizeChange()">
+            <mat-icon> fullscreen </mat-icon>
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
