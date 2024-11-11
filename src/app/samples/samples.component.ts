@@ -8,7 +8,7 @@ import { image, sampleType } from '../shared/sample';
 })
 export class SamplesComponent implements OnInit {
   constructor(private SampleList: SamplesService) {}
-  
+  golden = "#dec807" 
   W: boolean = false;
   D: boolean = true;
   G: boolean = false;
@@ -27,8 +27,17 @@ export class SamplesComponent implements OnInit {
     this.D = false;
     this.W = true;
   }
+  IsExpanded(index:number,className:string): boolean {
+    if (className === 'Sizechange') {
+      return index === this.selectedIndex;
+      
+    }
+    return false
+  }
   selectedIndex = 0;
+  selectedImageIndex = 0;
   showprev(i: number) {
+
     if (this.selectedIndex > 0) {
       this.selectedIndex = i - 1;
     }
@@ -40,8 +49,12 @@ export class SamplesComponent implements OnInit {
     }
   }
   isExpanded = false
+  changePix(num:number){
+    this.selectedImageIndex = num;
+  }
   SizeChange(){
-    this.isExpanded = !this.isExpanded
+    this.isExpanded = !this.isExpanded;
+    this.selectedImageIndex = 0;
 
   }
   designList: sampleType[] = [{
@@ -50,7 +63,7 @@ export class SamplesComponent implements OnInit {
     category: 1,
     images: [
       { image: '../assets/webPage.png' },
-      { image: 'image1b.jpg' }
+      { image: '../assets/img/sample3png.png' }
     ]
   },
   {
